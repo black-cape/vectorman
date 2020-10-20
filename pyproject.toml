@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "vectorman"
+version = "0.0.0"
+description = "Create vector tiles from GeoJSON to the Mapbox Vector Tiles spec."
+authors = ["Justin Shelton <justin@blackcape.io>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+marshmallow = "^3.8.0"
+marshmallow-enum = "^1.5.1"
+geojson2vt = "^1.0.1"
+geojson = "^2.5.0"
+protobuf = "^3.13.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.1.1"
+pytest-cov = "^2.10.1"
+pylint = "^2.5.3"
+black = {version = "^20.8b1", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

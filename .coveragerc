@@ -1,0 +1,5 @@
+[run]
+omit = *wsgi.py, *_pb2*.py
+
+[tool:pytest]
+addopts = --cov=vectorman --cov-report html --cov-report term
