@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "vectorman"
-version = "0.0.0"
+version = "0.0.1"
 description = "Create vector tiles from GeoJSON to the Mapbox Vector Tiles spec."
 authors = ["Justin Shelton <justin@blackcape.io>"]
 license = "MIT"
