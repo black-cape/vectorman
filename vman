@@ -1,0 +1,27 @@
+#!/bin/bash
+
+USAGE="usage: $0 CMD [OPTIONS]"
+cmd="$1"
+shift
+
+case "$cmd" in
+  install)
+    pip install -e .
+    ;;
+  test)
+    pytest --cov-config=.coveragerc --cov=vectorman --cov-report html --cov-report term --disable-warnings $@ tests
+    ;;
+  lint)
+    pylint vectorman
+    ;;
+  proto)
+    docker run -v `pwd`:/defs namely/protoc-all -i vectorman/resources -f vector_tile.proto -l python -o vectorman/pbf
+    ;;
+  black)
+    black --safe vectorman
+    ;;
+  *)
+    echo >&2 "Missing or invalid arguments."
+    echo >&2 "  $USAGE"
+    ;;
+esac
