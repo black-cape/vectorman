@@ -11,7 +11,7 @@ marshmallow = "^3.8.0"
 marshmallow-enum = "^1.5.1"
 geojson2vt = "^1.0.1"
 geojson = "^2.5.0"
-protobuf = "^3.13.0"
+protobuf = "^3.18.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.1.1"
